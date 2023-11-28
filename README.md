@@ -1,6 +1,6 @@
-# Web Scraper for Revlon Products
+# Internal Work Website Data Extraction Tool
 
-This Python script automates the process of retrieving product information for Revlon products from the [brands.silo.co.za](https://brands.silo.co.za/#/Job/JobListingV2) website and populating an Excel file with the gathered data.
+This Python script automates the process of retrieving product information for products from the [brands.silo.co.za] website and populating an Excel file with the gathered data.
 
 ## Overview
 
