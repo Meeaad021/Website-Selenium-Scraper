@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Web Scraper</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- Main Scraping View -->
+    <div id="mainView" class="view active">
+        <div class="header">
+            <h1>📊 Web Scraper</h1>
+            <button id="settingsBtn" class="settings-btn" title="Settings">⚙️</button>
+        </div>
+
+        <div class="content">
+            <button id="scanBtn" class="btn btn-primary">Scan Page</button>
+            <button id="mapFieldsBtn" class="btn btn-secondary">Map Fields Manually</button>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h3>Found Records: <span id="recordCount">0</span></h3>
+            <div id="previewTable" class="preview-table"></div>
+            <button id="exportBtn" class="btn btn-success">📥 Export as CSV</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Scanning page...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <!-- Configuration View -->
+    <div id="configView" class="view">
+        <div class="header">
+            <button id="backBtn" class="back-btn">← Back</button>
+            <h2>Configuration</h2>
+        </div>
+
+        <div class="content">
+            <h3>Scraping Fields</h3>
+            <div id="fieldsList" class="fields-list"></div>
+            
+            <div class="field-input">
+                <input type="text" id="newFieldInput" placeholder="Add new field...">
+                <button id="addFieldBtn" class="btn btn-small">+ Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Field Mapping View -->
+    <div id="mapView" class="view">
+        <div class="header">
+            <button id="backFromMapBtn" class="back-btn">← Back</button>
+            <h2>Map Fields</h2>
+        </div>
+
+        <div class="content">
+            <p class="map-instructions">Click on elements in the webpage to map them to fields below:</p>
+            
+            <div id="fieldMapList" class="field-map-list"></div>
+
+            <div class="map-actions">
+                <button id="startMapBtn" class="btn btn-primary">Start Mapping</button>
+                <button id="saveMapBtn" class="btn btn-success hidden">Save Mapping</button>
+                <button id="cancelMapBtn" class="btn btn-secondary hidden">Cancel</button>
+            </div>
+
+            <div id="mapStatus" class="map-status hidden"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
